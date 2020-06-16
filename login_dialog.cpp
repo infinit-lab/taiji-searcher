@@ -33,6 +33,8 @@ CLoginDialog::CLoginDialog(QWidget* parent)
     m_confirm->setText(tr("Confirm"));
     m_cancel->setText(tr("Cancel"));
 
+    m_password->setEchoMode(QLineEdit::Password);
+
     connect(m_confirm, SIGNAL(released()), this, SLOT(onConfirm()));
     connect(m_cancel, SIGNAL(released()), this, SLOT(reject()));
 }
